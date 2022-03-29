@@ -1,0 +1,541 @@
+html {
+    box-sizing: border-box;
+    background-color: #e5e5e5;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  @font-face {
+    font-family: 'Muller';
+    src: local('Muller-Regular'), url('../fonts/MullerRegular.woff2') format('woff2');
+    src: local('Muller-Regular'), url('../fonts/MullerRegular.woff') format('woff');
+    font-weight: 400;
+    font-size: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Muller';
+    src: local('Muller-Light'), url('../fonts/MullerLight.woff2') format('woff2');
+    src: local('Muller-Light'), url('../fonts/MullerLight.woff') format('woff');
+    font-weight: 300;
+    font-size: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Muller';
+    src: local('Muller-Medium'), url('../fonts/MullerMedium.woff2') format('woff2');
+    src: local('Muller-Medium'), url('../fonts/MullerMedium.woff') format('woff');
+    font-weight: 500;
+    font-size: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Muller';
+    src: local('Muller-Bold'), url('../fonts/MullerBold.woff2') format('woff2');
+    src: local('Muller-Bold'), url('../fonts/MullerBold.woff') format('woff');
+    font-weight: 700;
+    font-size: normal;
+    font-display: swap;
+  }
+
+  body {
+    min-width: 1200px;
+    font-family: 'Muller', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+  }
+
+  /* glob */
+  .list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .btn-reset {
+    padding: 0;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    margin: 0;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: #333333;
+  }
+
+  .section-offset {
+    padding-bottom: 70px;
+  }
+
+  .btn {
+    padding: 13px 20px;
+    border: 1px solid #CC9933;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #CC9933;
+  }
+
+  .header {
+    padding-top: 30px;
+  }
+
+  /* header-top */
+  .header-top {
+    margin-bottom: 30px;
+    align-items: center;
+  }
+
+  .header-logo {
+    display: block;
+    margin-right: 40px;
+    width: 261px;
+    height: 54px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/logo.svg');
+
+  }
+
+  .header-link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: #666666;
+  }
+
+  .header-authorization {
+    margin-left: auto;
+    padding-left: 28px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 21px 12px;
+    background-image: url('../img/header-authorization.svg');
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #CC9933;
+  }
+
+  /* header-subtop */
+  .header-subtop {
+    justify-content: space-between;
+    background-color: #fff;
+    max-width: 1170px;
+    min-height: 70px;
+    border-radius: 15px;
+    padding: 10px 45px;
+  }
+
+  .header-subtop-navs {
+    align-items: center;
+    min-height: 50px;
+    padding-right: 56px;
+    border-right: 1px solid #E1E1E1;
+  }
+
+  .header-list {
+    align-items: center;
+  }
+
+  .header-list-item {
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #666666;
+  }
+
+  .header-list-item:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  .header-btn:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  /* special_offers */
+  .special_offers-title {
+    margin-bottom: 20px;
+  }
+
+  .special_offers-content-left {
+    width: 573px;
+    margin-right: 23px;
+  }
+
+  .special_offers-list {
+    width: 100%;
+  }
+
+  .special_offers-list-item-1 {
+    background-image: url(../img/special_offers-1.png);
+  }
+
+  .special_offers-list-item-2 {
+    background-image: url(../img/special_offers-2.png);
+  }
+
+  .special_offers-list-item {
+    padding: 40px;
+    border-radius: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .special_offers-list-item:not(:last-child) {
+    margin-bottom: 23px;
+  }
+
+  .special_offers-list-item-title {
+    margin: 0;
+    margin-bottom: 15px;
+    max-width: 299px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    color: #FFFFFF;
+  }
+
+  .special_offers-list-item-price {
+    margin: 0;
+    margin-bottom: 47px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #FFFFFF;
+  }
+
+  .special_offers-list-item-details {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFCC66;
+    padding-right: 20px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 11px 18px;
+    background-image: url(../img/right-pointer-yellow.png);
+  }
+
+  .special_offers-content-right {
+    width: 573px;
+    padding: 211px 40px 40px;
+    align-items: flex-end;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/special_offers-3.png);
+  }
+
+  .special_offers-right-article {
+    flex-direction: column;
+  }
+
+  .special_offers-right-title {
+    margin: 0;
+    margin-bottom: 15px;
+    width: 299px;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 60px;
+    color: #FFFFFF;
+  }
+
+  .special_offers-right-price {
+    margin: 0;
+    margin-bottom: 47px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    color: #FFFFFF;
+  }
+
+  /* about_us */
+  .about_us-title {
+    margin-bottom: 11px;
+  }
+
+  .about_us-descr {
+    width: 888px;
+    margin: 0;
+    max-width: 888px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    color: #000000;
+  }
+
+  /* services */
+  .services-title {
+    margin-bottom: 20px;
+  }
+
+  .services-list {
+    flex-wrap: wrap;
+  }
+
+  .services-list-item {
+    max-width: 573px;
+    padding: 191px 45px 50px;
+    margin-bottom: 23px;
+    border-radius: 15px;
+    background-color: #fff;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 573px 165px;
+  }
+
+  .services-list-item-1 {
+    background-image: url(../img/services-1.jpg);
+  }
+
+  .services-list-item-2 {
+    background-image: url(../img/services-2.jpg);
+  }
+
+  .services-list-item-3 {
+    background-image: url(../img/services-3.jpg);
+  }
+
+  .services-list-item-4 {
+    background-image: url(../img/services-4.jpg);
+  }
+
+  .services-list-item:not(:nth-child(2n)){
+    margin-right: 23px;
+  }
+
+  .services-link {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 200%;
+    color: #CC9933;
+    padding-right: 20px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 11px 18px;
+    background-image: url(../img/right-pointer-dark_yellow.png);
+  }
+
+  .services-descr {
+    margin: 0;
+  }
+
+  /* benefits */
+  .benefits-list {
+    flex-wrap: wrap;
+  }
+
+  .benefits-list-item {
+    width: 275px;
+    padding: 40px 42px 41px 45px;
+    margin-bottom: 23px;
+    background: #FFFFFF;
+    border-radius: 15px;
+  }
+
+  .benefits-list-item-img {
+    margin: 0;
+    margin-bottom: 10px;
+    width: 67px;
+    height: 66px;
+    background-repeat: no-repeat;
+    background-size: 67px 66px;
+    background-position: left bottom;
+  }
+
+  .benefits-1 {
+    background-image: url(../img/benefit-1.svg);
+  }
+
+  .benefits-2 {
+    background-image: url(../img/benefit-2.svg);
+  }
+
+  .benefits-3 {
+    background-image: url(../img/benefit-3.svg);
+  }
+
+  .benefits-4 {
+    background-image: url(../img/benefit-4.svg);
+  }
+
+  .benefits-5 {
+    background-image: url(../img/benefit-5.svg);
+  }
+
+  .benefits-6 {
+    background-image: url(../img/benefit-6.svg);
+  }
+
+  .benefits-7 {
+    background-image: url(../img/benefit-7.svg);
+  }
+
+  .benefits-8 {
+    background-image: url(../img/benefit-8.svg);
+  }
+
+  .benefits-descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    color: #000000;
+  }
+
+  .benefits-list-item:not(:nth-child(4n)) {
+    margin-right: 23px;
+  }
+
+  /* accommodation */
+  .accommodation-list {
+    flex-wrap: wrap;
+  }
+
+  .accommodation-list-item {
+    width: 374px;
+    padding: 253px 45px 41px;
+    margin-bottom: 23px;
+    background-color: #fff;
+    border-radius: 15px;
+    background-size: 374px 217px;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
+  .accommodation-list-item-1 {
+    background-image: url("../img/accommodation-1.jpg");
+  }
+
+  .accommodation-list-item-2 {
+    background-image: url("../img/accommodation-2.jpg");
+  }
+
+  .accommodation-list-item-3 {
+    background-image: url("../img/accommodation-3.jpg");
+  }
+
+  .accommodation-list-item-4 {
+    background-image: url("../img/accommodation-4.jpg");
+  }
+
+  .accommodation-list-item-5 {
+    background-image: url("../img/accommodation-5.jpg");
+  }
+
+  .accommodation-list-item-6 {
+    background-image: url("../img/accommodation-6.jpg");
+  }
+
+  .accommodation-list-item-7 {
+    background-image: url("../img/accommodation-7.jpg");
+  }
+
+  .accommodation-list-item-8 {
+    background-image: url("../img/accommodation-8.jpg");
+  }
+
+  .accommodation-list-item-last-img {
+    background-size: cover;
+    background-image: url("../img/accommodation-last.jpg");
+  }
+
+  .accommodation-list-item:not(:nth-child(3n)) {
+    margin-right: 23px;
+  }
+
+  .accommodation-price {
+    display: inline-block;
+    margin: 0;
+    margin-right: 45px;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+  }
+
+  .accommodation-price-from {
+    color: #999999;
+  }
+
+  .accommodation-price-bold {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  .accommodiation-hotel_name {
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+  }
+
+  .accommodation-hotel_location {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #999999
+  }
+
+  .accommodation-list-item-last {
+    padding-bottom: 27px;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .accommodation-list-item-last-link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 200%;
+    color: #FFFFFF;
+    padding-right: 20px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 11px 18px;
+    background-image: url(../img/right-pointer-white.png);
+  }
